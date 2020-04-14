@@ -1,0 +1,20 @@
+<div class="main mails-index">
+  <div class="container">
+    <h1 class="form-heading-bell"><i class="far fa-envelope-open"></i> ヘルプホーム</h1>
+    <div class="balloon5">
+      <% @mails.each do |mail| %>
+        <div class="faceicon">
+          <img src="https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg">
+        </div>
+        <div class="chatting">
+          <div class="says">
+            <%= mail.content %>
+            <div class="bell-time">
+              <%= mail.created_at.strftime("%Y年%m月") %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

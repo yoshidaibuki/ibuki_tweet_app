@@ -1,0 +1,27 @@
+<div class="main-new users-new">
+  <div class="container">
+    <div class="form-heading-new">新規ユーザー登録</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        
+        <%= form_tag("/users/create") do %>
+          <p>名前</p>
+          <input name="name" value="<%= @user.name %>" placeholder="nameを入力" style="color:#ffffff">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>" placeholder="emailを入力" style="color:#ffffff">
+          <p>パスワード</p>
+          <input type="password" name="password" value="<%= @user.password %>" placeholder="passwordを入力" style="color:#ffffff">
+          <input type="submit" value="新規登録">
+        <% end %>
+      </div>
+    </div>
+    <div class="new-login">
+      すでにアカウントをお持ちですか？ <%= link_to("ログイン", "/login", class: "new-login-link") %>
+    </div>
+  </div>
+</div>

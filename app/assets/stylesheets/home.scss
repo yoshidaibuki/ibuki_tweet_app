@@ -1,0 +1,145 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-main {
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  height: 530px;
+  text-align: center;
+  font-size: 100px;
+  padding-top: 140px;
+  color: #2b546a;
+  font-family: "AvenirNext", "Lato", "Hirago KakuGothic ProN", Meiryo, sans-serif;
+}
+
+.top-link-btn {
+  width: 500px;
+  margin: 30px auto;
+  padding-right: 15px;
+  padding-left: 60px;
+}
+
+.top-main li {
+  float: left;
+  line-height: 50px;
+  font-size: 22px;
+  padding-left: 45px;
+  padding-top: 3px;
+}
+
+.top-main a {
+	display: block;
+	cursor: pointer;
+	max-width: 500px;
+  margin: 10px auto;
+  padding: 0 50px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: #fff;
+	text-align: center;
+	text-decoration: inherit;
+  background: #20b2aa;
+  box-shadow: 0 6px 0 #047c71, 0 12px 0 rgba(0,0,0,.2);
+	transition: color .3s, background .3s, box-shadow .3s, transform 0.3s;
+}
+.top-main a:hover {
+	background: #3cc4bd;
+	box-shadow: 0 3px 0 #12978d, 0 6px 0 rgba(0,0,0,.2);
+	transform: translateY(3px);
+}
+.top-main:active {
+	box-shadow: 0 0 0 #047c71, 0 0 0 rgba(0,0,0,.2);
+	transform: translateY(6px);
+	transition-duration: .1s;
+}
+
+.top-sub {
+  padding: 150px 50px;
+  height: 400px;
+  width: 100%;
+  background: linear-gradient(-45deg, rgba(5, 251, 255, 0.637), rgba(29, 99, 240, 0.705)) fixed, url("/background-image.jpg") fixed;
+  background-size: cover;
+  color: rgb(241, 241, 241);
+  font-size: 80px;
+  font-family: Helvetica Neue LT,Helvetica Neue,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+}
+
+.top-sub-sub {
+  background: linear-gradient(-45deg, rgba(5, 251, 255, 0.637), rgba(29, 99, 240, 0.705)) fixed, url("/background-image.jpg") fixed;
+  background-size: cover;
+  height: 440px;
+  color: rgb(43, 42, 42);
+  padding: 130px 50px;
+}
+
+.sub-sub-text {
+  opacity: 0.8;
+  font-size: 90px;
+  float: right;
+}
+
+.footer-top {
+  background-color: white;
+  color: rgb(80, 80, 80);
+  padding: 20px 60px;
+  width: 100%;
+  height: 150px;
+}
+
+.footer-bottom {
+  font-size: 12px;
+}
+
+.footer-text {
+  margin-top: 40px;
+  text-align: center;
+  color: #6783a0;
+}
+
+/*small-conputer*/
+@media (max-width: 1200px) {
+  .top-main {
+    font-size: 75px;
+    height: 490px;
+  }
+
+  .top-sub {
+    padding: 150px 50px;
+    font-size: 70px;
+  }
+  .sub-sub-text {
+    font-size: 80px;
+  }
+}
+/*tablet*/
+@media (max-width: 930px) {
+  .top-main {
+    font-size: 60px;
+    height: 410px;
+  } 
+  .top-main a {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+  }
+  .sub-sub-text {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 670px) {
+  .top-main {
+    font-size: 40px;
+    height: 360px;
+  } 
+  .top-sub {
+    height: 300px;
+    font-size: 60px;
+  }
+  .top-sub-sub {
+    height: 500px;
+  }
+  .sub-sub-text {
+    font-size: 70px;
+  }
+}

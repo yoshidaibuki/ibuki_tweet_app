@@ -1,0 +1,16 @@
+<div class="main mails-new">
+  <div class="container">
+    <div class="dash-bord">
+      <h1 class="form-heading"><i class="far fa-question-circle"></i> HelpCenter</h1>
+      <p>Tweetをご利用頂きありがとうございます。<br>ご不明点やご意見がございましたら、フォームよりご連絡ください。</p>
+      <%= form_tag("/mails/create") do %>
+        <div class="form">
+          <div class="form-body">
+            <textarea name="content" placeholder="メッセージ"></textarea>
+            <input type="submit" value="送信">
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

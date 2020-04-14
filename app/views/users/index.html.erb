@@ -1,0 +1,19 @@
+<div class="main users-index">
+  <div class="container">
+    <h1 class="users-heading"><i class="fas fa-users"></i> User</h1>
+    <h1 class="users-sub">※ユーザー名をクリックすると詳細が表示されます</h1>
+    <% @users.each do |user| %>
+      <div class="users-index-item">
+        <div class="user-left">
+          <img src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
+        <div class="user-right">
+          <%= link_to(user.name, "/users/#{user.id}", :style=>"color:white;font-size:19px;") %>
+          <div class="example-user-index">
+            <%= user.text %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

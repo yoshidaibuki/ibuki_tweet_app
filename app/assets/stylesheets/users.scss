@@ -1,0 +1,327 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* users/index ================================ */
+.users-heading {
+  font-weight: 300;
+  margin: 60px 0 20px;
+  font-size: 30px;
+  color: #ebebeb;
+}
+  
+.users-index-item {
+  margin: 10px 0;
+  padding: 20px 30px;
+  background-color: rgb(36, 37, 39);
+  overflow: hidden;
+  display: table;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgb(145, 145, 145);
+}
+  
+.user-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.user-left img:hover {
+  opacity: 1.0;
+  transform: scale(1.1, 1.1);
+}
+
+  
+.user-name a {
+  font-weight: 600;
+}
+  
+.user-name a:hover {
+  color: #3ecdc6;
+}
+  
+.user-left {
+  float: left;
+  width: 10%;
+}
+  
+.user-right {
+  padding-top: 10px;
+  width: 100%;
+  padding-left: 35px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+ 
+.users-sub {
+  color: rgba(29,161,242,1.00);
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+/*==============================*/
+.user-show {
+  text-align: center;
+}
+
+.user {
+  height: 320px;
+  padding: 0 10px;
+  background-color: rgb(25, 57, 83);
+  text-align: center;
+  border: 1px solid rgb(145, 145, 145);
+}
+
+  
+.user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.user img:hover {
+  opacity: 1.0;
+  transform: scale(1.1, 1.1);
+}
+  
+.user h2 {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+  
+.user p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+  
+.user a {
+  color: #8899a6;
+  text-decoration: underline;
+  font-weight: 200;
+}
+  
+.user span {
+  color: #afb6bf;
+  font-weight: 200;
+  padding: 0 6px 0 8px;
+}
+  
+.user-tabs {
+  background-color: rgb(25, 57, 83);
+  overflow: hidden;
+  border: 1px solid rgb(145, 145, 145);
+}
+  
+.user-tabs li {
+  float: left;
+}
+  
+.user-tabs li.active {
+  border-bottom: 4px solid #ffffff;
+}
+  
+.user-tabs li.active a {
+  color: #ffffff;
+  font-weight: 500;
+}
+  
+.user-tabs a {
+  display: inline-block;
+  padding: 16px 30px;
+  color: #767779;
+}
+
+.user-time {
+  padding-top: 18px;
+  font-size: 15px;
+  color: rgb(139, 139, 139);
+  float: left;
+}
+.fa-calendar-alt {
+  margin-right: 5px;
+}
+
+.fa-cogs {
+  margin-right: 5px;
+}
+
+.user-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  clear: both;
+}
+
+.user-edit li {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+  
+.user-edit a {
+  padding: 5px 9px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration:none !important;
+  float: left;
+  font-size: 15px;
+  color: #2e90d6;
+  transition: 0.3s;
+  border: 2px solid #2e90d6;
+  border-radius: 25px;
+}
+
+.user-edit a:hover {
+  background-color: rgba(0, 162, 255, 0.164);
+}
+
+
+.user-help li {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+  
+.user-help a {
+  padding: 5px 9px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration:none !important;
+  float: left;
+  font-size: 15px;
+  color: #2e90d6;
+  transition: 0.3s;
+  border: 2px solid #2e90d6;
+  border-radius: 25px;
+}
+
+.user-help a:hover {
+  background-color: rgba(0, 162, 255, 0.164);
+}
+
+.user-help-center a {
+  padding: 5px 9px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration:none !important;
+  float: left;
+  font-size: 15px;
+  color: #2e90d6;
+  transition: 0.3s;
+  border: 2px solid #2e90d6;
+  border-radius: 25px;
+}
+
+.user-help-center a:hover {
+  background-color: rgba(0, 162, 255, 0.164);
+}
+
+.user-send a{
+  padding: 5px 9px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration:none !important;
+  float: left;
+  font-size: 15px;
+  color: #2e90d6;
+  transition: 0.3s;
+  border: 2px solid #2e90d6;
+  border-radius: 25px;
+}
+
+.user-send a:hover {
+  background-color: rgba(0, 162, 255, 0.164);
+}
+
+.example {
+  max-width: 540px;
+  height: 35px;
+  white-space:nowrap;
+  overflow: scroll;
+  color: rgb(247, 247, 247);
+  font-size: 14px;
+}
+
+.example-user-index {
+  margin-top: 10px;
+  float: right;
+  font-size: 13px;
+  scrollbar-color: white;
+  max-width: 300px;
+  height: 35px;
+  white-space:nowrap;
+  overflow: auto;
+  color: rgb(185, 185, 185);
+}
+
+.user-link {
+  font-size: 15px;
+  color: rgb(139, 139, 139);
+  float: left;
+  clear: both;
+}
+
+.user-link a {
+  color: rgba(29,161,242,1.00);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.user-link a:hover {
+  text-decoration: underline;
+}
+
+/* users/new, users/edit ================================ */
+.users-form input textarea{
+  margin-bottom: 15px;
+}
+p {
+  color: white;
+}
+
+
+.footer {
+  margin-top: 50px;
+  position: fixed;
+  background-color: rgb(8, 172, 236);
+  height: 100px;
+  border-radius: 10px;
+  padding: 18px 18px;
+  color: rgb(255, 255, 255);
+  max-width: 600px;
+  box-shadow: 0 0px 8px #3faefd;
+}
+
+.footer-text {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.new-login {
+  color: rgb(44, 44, 44);
+}
+
+.new-login-link {
+  color: rgb(0, 110, 255);
+}
+
+.new-login-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+

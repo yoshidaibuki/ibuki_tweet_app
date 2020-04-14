@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <% if @current_user %>
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("Tweet", "/home/top") %>
+          </li>
+        <% end %>
+      </div>
+      <ul class="header-menus">
+        <% if session[:user_id] %>
+          <li>
+            <%= link_to("/posts/index") do %>
+              <i class="fas fa-home"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/posts/new") do %>
+              <i class="far fa-comment-alt"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/users/index") do %>
+              <i class="fas fa-users"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/mails/new") do %>
+              <i class="far fa-question-circle"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/bells/index") do %>
+              <i class="far fa-bell"></i>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to("/logout", {method: :post}) do %>
+              <i class="fas fa-sign-out-alt"></i>Logout
+            <% end %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("新規登録", "/signup") %>
+          </li>
+          <li>
+            <%= link_to("ログイン", "/login") %>
+          </li>
+        <% end %>
+      </ul>
+    </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <i class="fas fa-clipboard-check"></i><%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:go] %>
+      <div class="flash-go">
+        <div class="modal">
+          <div>
+            <ul>
+              <li>
+                <%= link_to("/posts/index") do %>
+                  <i class="fas fa-times"></i>
+                <% end %>
+              </li>
+            </ul>
+            <div class="now-text">Find out what's happening now</div>
+            <%= @current_user.name %>さん<%= flash[:go].html_safe %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
+    <% if flash[:goemail] %>
+      <div class="flash-go">
+        <div class="modal-mail">
+          <div>
+            <ul>
+              <li>
+                <%= link_to("/posts/index") do %>
+                  <i class="far fa-times-circle"></i>
+                <% end %>
+              </li>
+            </ul>
+            <div class="goemail">
+              <%= @current_user.name %>さん<br><%= flash[:goemail].html_safe %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <%= yield %>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

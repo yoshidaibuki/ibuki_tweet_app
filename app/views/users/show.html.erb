@@ -1,0 +1,77 @@
+<div class="main user-show">
+  <div class="user-container">
+    <% if @user.id == @current_user.id %>
+      <ul class="user-edit">
+        <li>
+          <%= link_to("/users/#{@user.id}/edit") do %>
+            <i class="fas fa-cogs"></i>プロフィール編集
+          <% end %>
+        </li>
+      </ul>
+      <% if @user.id == 9 %>
+        <ul class="user-help">
+          <li>
+            <%= link_to("/mails/index") do %>
+              <i class="fas fa-question-circle"></i> Home
+            <% end %>
+          </li>
+          <li class="user-send">
+            <%= link_to("/bells/new") do %>
+              <i class="far fa-paper-plane"></i> Send
+            <% end %>
+        </li>
+        </ul>
+      <% end %>
+    <% end %>
+    <% if @user.id == 9 %>
+      <ul>
+        <li class="user-help-center">
+          <%= link_to("/mails/new") do %>
+            <i class="far fa-question-circle"></i> Center
+          <% end %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+  <div class="container">
+   <div class="user-flex">
+    <div class="user">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <div class="example"><%= @user.text %></div>
+      <div class="user-time">
+        <i class="far fa-calendar-alt"></i><%= @user.created_at.strftime("%Y年%m月") %>から利用しています
+      </div>
+      <div class="user-link">
+        <i class="fas fa-link"></i> <a href="<%= @user.link %>"><%= @user.link %></a>
+      </div>
+    </div>
+    <ul class="user-tabs">
+      <li class="active">
+        <%= link_to("/users/#{@user.id}") do %>
+          <i class="far fa-comment-alt"></i> Tweet
+        <% end %>  
+      </li>
+      <li>
+        <%= link_to("/users/#{@user.id}/likes") do %>
+          <i class="far fa-heart"></i> Like
+        <% end %>
+      </li>
+    </ul>
+    <% @user.posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-left">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        </div>
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}", :style=>"color:white;") %>
+          </div>
+          <%= link_to(post.content, "/posts/#{post.id}", :style=>"color:white;") %>
+        </div>
+      </div>
+    <% end %>
+   </div>
+  </div>
+</div>

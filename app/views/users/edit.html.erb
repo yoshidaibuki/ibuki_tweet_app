@@ -1,0 +1,29 @@
+<div class="main users-edit">
+  <div class="container">
+    <div class="form-heading"><i class="fas fa-cogs"></i>アカウント編集</div>
+    <div class="form users-form">
+      <div class="form-body">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+          <p>ユーザー名</p>
+          <input name="name" value="<%= @user.name %>" style="color:#ffffff">
+          <p>アイコン画像</p>
+          <input name="image" type="file">
+          <p>メールアドレス</p>
+          <input name="email" value="<%= @user.email %>" style="color:#ffffff">
+          <p>パスワード</p>
+          <input name="password" value="<%= @user.password %>" style="color:#ffffff">
+          <p>ウェブサイト</p>
+          <input name="link" value="<%= @user.link %>" placeholder="ウェブサイトのリンクを入力" style="color:#ffffff">
+          <p>自己紹介</p>
+          <textarea name="text" value="<%= @user.text %>" placeholder="自己紹介を入力" style="color:#ffffff"><%= @user.text %></textarea>
+          <input type="submit" value="保存">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

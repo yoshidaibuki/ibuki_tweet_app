@@ -1,0 +1,18 @@
+<div class="main posts-index">
+  <div class="container">
+    <h1 class="form-heading"><i class="fas fa-home"></i> Home</h1>
+    <% @posts.each do |post| %>
+      <div class="posts-index-item">
+        <div class="post-left">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        </div>
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}", :style=>"color:white;") %>
+          </div>
+          <%= link_to(post.content, "/posts/#{post.id}", :style=>"color:white;") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

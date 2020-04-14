@@ -1,0 +1,21 @@
+<div class="main bells-index">
+  <div class="container">
+    <h1 class="form-heading-bell"><i class="far fa-envelope-open"></i> Message</h1>
+    <div class="balloon5">
+      <% @bells.each do |bell| %>
+        <div class="faceicon">
+          <img src="https://applimura.com/wp-content/uploads/2019/08/twittericon13.jpg">
+        </div>
+        <div class="chatting">
+          <div class="says">
+            <%= bell.content %>
+            <div class="bell-time">
+              <%= bell.created_at.strftime("%Y/%m/%d") %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

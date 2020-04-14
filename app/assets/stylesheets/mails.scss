@@ -1,0 +1,131 @@
+// Place all the styles related to the mails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-heading-mail {
+  font-weight: 500;
+  margin: 60px 0 20px;
+  font-size: 28px;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+.balloon5 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.balloon5 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon5 .faceicon img{
+  width: 90%;
+  height: auto;
+  border: solid 3px #d7ebfe;
+  border-radius: 50%;
+}
+
+.balloon5 .chatting {
+  width: 100%;
+}
+
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+  background: #d7ebfe;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid #d7ebfe;
+}
+
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.bells-index-item {
+    font-size: 14px;
+    padding: 20px 30px;
+    background-color: rgb(199, 199, 199);
+    overflow: hidden;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 10px;
+    color: #24262e;
+    font-family:  100%/1.5 "Lato", "Hiragino Maru Gothic Pro", "Meiryo UI", Meiryo, "MS PGothic", sans-serif;
+  }
+  
+  .bell-left img {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    box-shadow: 0 2px 6px #c1ced7;
+    object-fit: cover;
+  }
+  
+  .bell-user-name a {
+    font-weight: 600;
+  }
+  
+  .bell-user-name a:hover {
+    color: #3ecdc6;
+  }
+  
+  .bell-left {
+    float: left;
+    width: 10%;
+  }
+  
+  .bell-right {
+    float: left;
+    width: 90%;
+    padding-left: 25px;
+    text-align: left;
+  }
+  
+  /* posts/new ================================ */
+.dash-bord {
+  background-color: rgb(14, 19, 27);
+  padding: 10px 50px;
+  box-shadow: 0 0 9px white;
+  height: 550px;
+}
+
+.mails-new textarea {
+  font-size: 20px;
+  padding: 10px;
+  min-height: 140px;
+  border: 1px solid rgb(216, 218, 223);
+  resize: none;
+}
+  
+.mails-new textarea::-webkit-input-placeholder {
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+.mails-new p {
+  color: grey;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+  .mails-new textarea::-webkit-input-placeholder {
+    font-size: 16px;
+    opacity: 0.5;
+    color: white;
+  }
